@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .container {
+        margin-top: 40px;
+        display: flex;
+        border: 5px solid black;
+        flex-direction: column;
+      }
+
+      .container > div {
+        height: 200px;
+        width: 200px;
+        margin: 20px;
+        font-size: 40px;
+      }
+
+      .container > div:nth-child(1) {
+        background-color: brown;
+      }
+      .container > div:nth-child(2) {
+        background-color: blue;
+      }
+
+      .container > div:nth-child(3) {
+        background-color: chocolate;
+      }
+      .row-r {
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex-direction row</h1>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <h1>FLex -direction row-reverse</h1>
+    <div class="container row-r">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>

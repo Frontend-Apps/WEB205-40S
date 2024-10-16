@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: green;
+      }
+
+      h1 {
+        font-size: 50px;
+        text-align: center;
+      }
+
+      /* Small screen */
+
+      @media screen and (min-width: 300px) and (max-width: 450px) {
+        body {
+          background-color: yellow;
+        }
+        h1 {
+          font-size: 20px;
+          font-style: italic;
+          text-align: right;
+        }
+      }
+
+      /* Medium screen */
+      @media screen and (min-width: 451px) and (max-width: 750px) {
+        body {
+          background-color: lightblue;
+        }
+        h1 {
+          font-size: 35px;
+          text-align: left;
+        }
+      }
+
+      /* large screen */
+      /* desktop-first-approach */
+    </style>
+  </head>
+  <body>
+    <h1>Masai school</h1>
+  </body>
+</html>

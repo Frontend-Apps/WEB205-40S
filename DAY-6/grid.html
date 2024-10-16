@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        gap: 20px;
+      }
+
+      #container > div {
+        background-color: teal;
+        border-radius: 20px;
+      }
+      #container > div:nth-child(1) {
+        grid-column: 1 / span 2;
+      }
+
+      #container > div:nth-child(2) {
+        grid-column: 3 / span 2;
+      }
+      #container > div:nth-child(4) {
+        grid-column: 2 / -1;
+      }
+
+      #container > div:nth-child(5) {
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

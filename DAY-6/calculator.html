@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/0150c7260a.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+
+      #container {
+        width: 40%;
+        margin: auto;
+        margin-top: 400px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 80px auto;
+        gap: 20px;
+        padding: 30px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 20px;
+      }
+
+      #container > div {
+        padding: 20px;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #container > div:nth-child(1) {
+        grid-column: 1 / span 4;
+      }
+      .black {
+        background-color: black;
+        color: white;
+      }
+      .red {
+        background-color: red;
+        color: white;
+      }
+      .plus {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Masai Calculator</h1>
+    <div id="container">
+      <div id="display"></div>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div class="black">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div class="black">-</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div class="black">
+        <span class="material-symbols-outlined"> close </span>
+      </div>
+      <div class="red">C</div>
+      <div>0</div>
+      <div class="black">=</div>
+      <div class="black">/</div>
+    </div>
+  </body>
+</html>

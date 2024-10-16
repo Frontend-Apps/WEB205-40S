@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        border: 10px solid black;
+        padding: 30px;
+        height: 500px;
+        align-items: center;
+      }
+
+      .container > div {
+        font-size: 40px;
+        padding: 40px;
+      }
+
+      .container > div:nth-child(1) {
+        background-color: teal;
+        align-self: flex-start;
+      }
+      .container > div:nth-child(2) {
+        background-color: orange;
+        align-self: flex-end;
+      }
+      .container > div:nth-child(3) {
+        background-color: rgb(76, 76, 212);
+        align-self: stretch;
+
+      }
+      .container > div:nth-child(4) {
+        background-color: teal;
+        align-self: baseline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>
