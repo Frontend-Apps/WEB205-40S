@@ -1,99 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card UI</title>
     <style>
-      /* ED0331 */
-      button {
-        border: 1px solid #ed0331;
-        color: #ed0331;
-        background-color: transparent;
-        font-family: monospace;
-        padding: 5px 10px;
-        border-radius: 5px;
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
       }
 
-      button:hover {
-        background-color: rgb(224, 170, 179);
+      /* Credit Card Container */
+      .credit-card {
+        width: 380px;
+        height: 220px;
+        background: linear-gradient(145deg, #3b72ff, #42a5f5);
+        border-radius: 20px;
+        color: white;
+        padding: 20px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        position: relative;
+        overflow: hidden;
       }
 
-      input:focus {
-        border: 2px solid #ed0331;
-        outline: none;
+      /* Card Company Logo */
+      .credit-card .card-logo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        opacity: 0.7;
       }
 
-      li:nth-child(8) {
-        color: red;
+      /* Card Number */
+      .credit-card .card-number {
+        font-size: 24px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
       }
 
-      li:last-child {
-        color: teal;
+      /* Card Holder */
+      .credit-card .card-info {
+        display: flex;
+        justify-content: space-between;
       }
 
-      p::first-line {
-        color: red;
-      }
-      h1::before {
-        content: "😍";
-      }
-      h1::after {
-        content: "😍";
+      .credit-card .card-info .card-holder {
+        display: flex;
+        flex-direction: column;
       }
 
-      p::selection {
-        background-color: teal;
+      .credit-card .card-info .card-holder p {
+        font-size: 12px;
+        margin-bottom: 5px;
+        opacity: 0.7;
+      }
+
+      .credit-card .card-info .card-holder h3 {
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+
+      /* Expiration Date */
+      .credit-card .card-info .expiry-date {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .credit-card .card-info .expiry-date p {
+        font-size: 12px;
+        margin-bottom: 5px;
+        opacity: 0.7;
+      }
+
+      .credit-card .card-info .expiry-date h3 {
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+
+      /* Card Background Design */
+      .credit-card .design {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        top: -50px;
+        left: -50px;
+      }
+
+      .credit-card .design2 {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        bottom: -100px;
+        right: -100px;
+      }
+
+      /* Add Chip */
+      .chip {
+        width: 50px;
+        height: 35px;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 20px;
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
-    <button>Register</button>
-    <input type="text" placeholder="Enter your name" />
+    <div class="credit-card">
+      <!-- Background Circle Designs -->
+      <div class="design"></div>
+      <div class="design2"></div>
 
-    <ul>
-      <li>First item</li>
-      <li>Second item</li>
-      <li>Third item</li>
-      <li>Fourth item</li>
-      <li>5th item</li>
-      <li>6th item</li>
-      <li>7th item</li>
-      <li>8th item</li>
-    </ul>
+      <!-- Card Chip -->
+      <div class="chip"></div>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi soluta
-      tenetur labore accusantium eos qui tempora, incidunt aliquid repellendus
-      atque totam reprehenderit odit ipsa minus, quam doloremque vero sit
-      suscipit! Praesentium, aut! Magni, ipsam suscipit dicta nemo soluta
-      eligendi voluptatum! Molestias, sapiente hic officia voluptas doloremque
-      magni itaque dignissimos sit illo aliquid eius, ex necessitatibus quisquam
-      placeat impedit totam expedita? Quam dignissimos voluptatibus placeat
-      tempora aliquid ratione cum! Perspiciatis vel, fugit dolorum dolorem
-      distinctio porro officia suscipit excepturi non, veniam cumque?
-      Consequatur id facilis voluptates dolorem possimus necessitatibus culpa
-      perspiciatis. Repellendus fugiat velit labore inventore commodi non
-      officia doloremque suscipit quaerat necessitatibus reiciendis, sit quis
-      maxime itaque architecto impedit nam rem dolores sapiente et! Quam iste
-      consequuntur nihil velit adipisci. Qui dignissimos eum blanditiis, quam,
-      reiciendis voluptatum, alias laboriosam excepturi pariatur deserunt
-      eveniet natus commodi. Repellendus sapiente officiis fugiat, ut quo sequi
-      repudiandae alias nulla, repellat ipsam, natus consequuntur culpa! Eum
-      dolorum eligendi voluptates repudiandae, molestiae sit expedita
-      accusantium harum eius esse iure mollitia aliquam inventore recusandae,
-      reiciendis, rerum quam tenetur impedit consequuntur quibusdam. Laborum
-      consectetur fuga iste neque cumque. Dolore mollitia nostrum, ex, ab
-      consectetur fugiat obcaecati, ut et deleniti modi aliquam aut numquam
-      rerum. Non itaque iusto ea nesciunt nam. Magnam expedita vel maiores!
-      Distinctio et odit vero. Veniam adipisci veritatis quibusdam suscipit quis
-      quaerat neque vero voluptates, expedita consequuntur ab, fugit culpa nulla
-      esse? Aut totam sequi similique maiores repellendus culpa iusto quisquam
-      quas autem! Iure, illum! Tempore, exercitationem cumque impedit expedita
-      quis aut nulla repellat minus ea corrupti alias maiores sequi voluptatum
-      quod, necessitatibus reiciendis pariatur quidem? Perferendis modi eveniet
-      esse totam asperiores explicabo magnam est? Ut, illo! Numquam velit
-      temporibus at dolore beatae perspiciatis repudiandae ipsam, ipsum tenetur
-      suscipit voluptatibus dolorem asperiores laudantium saepe necessitatibus
-      iure et debitis neque doloremque sequi non, magnam in deserunt.
-    </p>
-    <h1>Masai school</h1>
+      <!-- Card Number -->
+      <div class="card-number">1234 5678 9012 3456</div>
+
+      <!-- Card Holder and Expiry Date -->
+      <div class="card-info">
+        <div class="card-holder">
+          <p>Card Holder</p>
+          <h3>John Doe</h3>
+        </div>
+        <div class="expiry-date">
+          <p>Expires</p>
+          <h3>12/25</h3>
+        </div>
+      </div>
+
+      <!-- Card Company Logo (Using Font Awesome) -->
+      <div class="card-logo">
+        <i class="fab fa-cc-visa"></i>
+      </div>
+    </div>
   </body>
 </html>
