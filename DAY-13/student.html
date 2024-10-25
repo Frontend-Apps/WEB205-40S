@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Person Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      /* Container styling */
+      #cont {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      /* Target all direct children of #cont (the person cards) */
+      #cont > div {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 10px 0;
+      }
+
+      /* Target all h1 elements inside each person card */
+      #cont > div > h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      /* Target all p elements inside each person card */
+      #cont > div > p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      /* Hover effect for person cards */
+      #cont > div:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <div>
+        <h1>John Doe</h1>
+        <p>Age: 30</p>
+        <p>Place: New York</p>
+      </div>
+
+      <div>
+        <h1>Jane Smith</h1>
+        <p>Age: 25</p>
+        <p>Place: Los Angeles</p>
+      </div>
+
+      <div>
+        <h1>Michael Johnson</h1>
+        <p>Age: 40</p>
+        <p>Place: Chicago</p>
+      </div>
+
+      <div>
+        <h1>Emily Davis</h1>
+        <p>Age: 35</p>
+        <p>Place: San Francisco</p>
+      </div>
+
+      <div>
+        <h1>Chris Brown</h1>
+        <p>Age: 28</p>
+        <p>Place: Miami</p>
+      </div>
+
+      <div>
+        <h1>Jessica Williams</h1>
+        <p>Age: 22</p>
+        <p>Place: Seattle</p>
+      </div>
+
+      <div>
+        <h1>David Wilson</h1>
+        <p>Age: 45</p>
+        <p>Place: Austin</p>
+      </div>
+
+      <div>
+        <h1>Amy Moore</h1>
+        <p>Age: 32</p>
+        <p>Place: Denver</p>
+      </div>
+
+      <div>
+        <h1>James Taylor</h1>
+        <p>Age: 29</p>
+        <p>Place: Boston</p>
+      </div>
+
+      <div>
+        <h1>Olivia Lee</h1>
+        <p>Age: 26</p>
+        <p>Place: Houston</p>
+      </div>
+
+      <div>
+        <h1>Matthew Harris</h1>
+        <p>Age: 34</p>
+        <p>Place: Orlando</p>
+      </div>
+
+      <div>
+        <h1>Sophia Clark</h1>
+        <p>Age: 27</p>
+        <p>Place: Dallas</p>
+      </div>
+
+      <div>
+        <h1>Daniel Lewis</h1>
+        <p>Age: 41</p>
+        <p>Place: Atlanta</p>
+      </div>
+
+      <div>
+        <h1>Chloe Martinez</h1>
+        <p>Age: 23</p>
+        <p>Place: Phoenix</p>
+      </div>
+
+      <div>
+        <h1>Andrew Walker</h1>
+        <p>Age: 36</p>
+        <p>Place: Philadelphia</p>
+      </div>
+
+      <div>
+        <h1>Isabella Young</h1>
+        <p>Age: 24</p>
+        <p>Place: San Diego</p>
+      </div>
+
+      <div>
+        <h1>Ryan Hall</h1>
+        <p>Age: 38</p>
+        <p>Place: Las Vegas</p>
+      </div>
+
+      <div>
+        <h1>Madison Allen</h1>
+        <p>Age: 21</p>
+        <p>Place: Nashville</p>
+      </div>
+
+      <div>
+        <h1>Joshua Scott</h1>
+        <p>Age: 33</p>
+        <p>Place: Portland</p>
+      </div>
+
+      <div>
+        <h1>Hannah King</h1>
+        <p>Age: 20</p>
+        <p>Place: Sacramento</p>
+      </div>
+
+      <div>
+        <h1>Ethan Wright</h1>
+        <p>Age: 30</p>
+        <p>Place: Kansas City</p>
+      </div>
+
+      <div>
+        <h1>Grace Green</h1>
+        <p>Age: 25</p>
+        <p>Place: Charlotte</p>
+      </div>
+
+      <div>
+        <h1>Tyler Adams</h1>
+        <p>Age: 29</p>
+        <p>Place: Jacksonville</p>
+      </div>
+
+      <div>
+        <h1>Samantha Baker</h1>
+        <p>Age: 26</p>
+        <p>Place: Indianapolis</p>
+      </div>
+
+      <div>
+        <h1>Noah Hill</h1>
+        <p>Age: 31</p>
+        <p>Place: Detroit</p>
+      </div>
+
+      <div>
+        <h1>Ava Perez</h1>
+        <p>Age: 22</p>
+        <p>Place: Memphis</p>
+      </div>
+
+      <div>
+        <h1>Benjamin Rivera</h1>
+        <p>Age: 40</p>
+        <p>Place: Oklahoma City</p>
+      </div>
+
+      <div>
+        <h1>Mia Stewart</h1>
+        <p>Age: 33</p>
+        <p>Place: Louisville</p>
+      </div>
+
+      <div>
+        <h1>Jackson Collins</h1>
+        <p>Age: 28</p>
+        <p>Place: Baltimore</p>
+      </div>
+
+      <div>
+        <h1>Ella Sanchez</h1>
+        <p>Age: 24</p>
+        <p>Place: Milwaukee</p>
+      </div>
+
+      <div>
+        <h1>Logan Morris</h1>
+        <p>Age: 35</p>
+        <p>Place: Albuquerque</p>
+      </div>
+
+      <div>
+        <h1>Victoria Reed</h1>
+        <p>Age: 27</p>
+        <p>Place: Tucson</p>
+      </div>
+
+      <div>
+        <h1>Jacob Bell</h1>
+        <p>Age: 42</p>
+        <p>Place: Fresno</p>
+      </div>
+
+      <div>
+        <h1>Lily Morgan</h1>
+        <p>Age: 22</p>
+        <p>Place: Mesa</p>
+      </div>
+
+      <div>
+        <h1>Lucas Rogers</h1>
+        <p>Age: 34</p>
+        <p>Place: Atlanta</p>
+      </div>
+
+      <div>
+        <h1>Zoe Cooper</h1>
+        <p>Age: 19</p>
+        <p>Place: Colorado Springs</p>
+      </div>
+
+      <div>
+        <h1>Mason Bailey</h1>
+        <p>Age: 32</p>
+        <p>Place: Virginia Beach</p>
+      </div>
+
+      <div>
+        <h1>Abigail Cox</h1>
+        <p>Age: 29</p>
+        <p>Place: Raleigh</p>
+      </div>
+
+      <div>
+        <h1>Owen Ward</h1>
+        <p>Age: 36</p>
+        <p>Place: Omaha</p>
+      </div>
+
+      <div>
+        <h1>Aurora Flores</h1>
+        <p>Age: 21</p>
+        <p>Place: Miami</p>
+      </div>
+
+      <div>
+        <h1>Carter Gray</h1>
+        <p>Age: 37</p>
+        <p>Place: Oakland</p>
+      </div>
+
+      <div>
+        <h1>Alice Patterson</h1>
+        <p>Age: 26</p>
+        <p>Place: Minneapolis</p>
+      </div>
+
+      <div>
+        <h1>Luke Ross</h1>
+        <p>Age: 31</p>
+        <p>Place: Arlington</p>
+      </div>
+
+      <div>
+        <h1>Charlotte Edwards</h1>
+        <p>Age: 27</p>
+        <p>Place: Tampa</p>
+      </div>
+
+      <div>
+        <h1>Henry Jenkins</h1>
+        <p>Age: 33</p>
+        <p>Place: New Orleans</p>
+      </div>
+
+      <div>
+        <h1>Evelyn Brooks</h1>
+        <p>Age: 28</p>
+        <p>Place: Wichita</p>
+      </div>
+
+      <div>
+        <h1>Isaac Sanders</h1>
+        <p>Age: 34</p>
+        <p>Place: Cleveland</p>
+      </div>
+
+      <div>
+        <h1>Scarlett Price</h1>
+        <p>Age: 23</p>
+        <p>Place: Tulsa</p>
+      </div>
+
+      <div>
+        <h1>Jack Butler</h1>
+        <p>Age: 38</p>
+        <p>Place: Honolulu</p>
+      </div>
+
+      <div>
+        <h1>Layla Long</h1>
+        <p>Age: 20</p>
+        <p>Place: Miami</p>
+      </div>
+    </div>
+  </body>
+</html>

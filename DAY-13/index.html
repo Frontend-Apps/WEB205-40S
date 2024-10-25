@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      /* Container styling */
+      #cont {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      /* Target all direct children of #cont (the person cards) */
+      #cont > div {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 10px 0;
+      }
+
+      /* Target all h1 elements inside each person card */
+      #cont > div > h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+
+      /* Target all p elements inside each person card */
+      #cont > div > p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      /* Hover effect for person cards */
+      #cont > div:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <select onchange="sortAge()">
+      <option value="">Sort by Age</option>
+      <option value="h2l">High to Low</option>
+      <option value="l2h">Low to High</option>
+    </select>
+
+    <div id="cont"></div>
+  </body>
+</html>
+<script>
+  let studentDetails = [
+    { name: "John Doe", age: 30, place: "New York" },
+    { name: "Jane Smith", age: 25, place: "Los Angeles" },
+    { name: "Michael Johnson", age: 40, place: "Chicago" },
+    { name: "Emily Davis", age: 35, place: "San Francisco" },
+    { name: "Chris Brown", age: 28, place: "Miami" },
+    { name: "Jessica Williams", age: 22, place: "Seattle" },
+    { name: "David Wilson", age: 45, place: "Austin" },
+    { name: "Amy Moore", age: 32, place: "Denver" },
+    { name: "James Taylor", age: 29, place: "Boston" },
+    { name: "Olivia Lee", age: 26, place: "Houston" },
+    { name: "Matthew Harris", age: 34, place: "Orlando" },
+    { name: "Sophia Clark", age: 27, place: "Dallas" },
+    { name: "Daniel Lewis", age: 41, place: "Atlanta" },
+    { name: "Chloe Martinez", age: 23, place: "Phoenix" },
+    { name: "Andrew Walker", age: 36, place: "Philadelphia" },
+    { name: "Isabella Young", age: 24, place: "San Diego" },
+    { name: "Ryan Hall", age: 38, place: "Las Vegas" },
+    { name: "Madison Allen", age: 21, place: "Nashville" },
+    { name: "Joshua Scott", age: 33, place: "Portland" },
+    { name: "Hannah King", age: 20, place: "Sacramento" },
+    { name: "Ethan Wright", age: 30, place: "Kansas City" },
+    { name: "Grace Green", age: 25, place: "Charlotte" },
+    { name: "Tyler Adams", age: 29, place: "Jacksonville" },
+    { name: "Samantha Baker", age: 26, place: "Indianapolis" },
+    { name: "Noah Hill", age: 31, place: "Detroit" },
+    { name: "Ava Perez", age: 22, place: "Memphis" },
+    { name: "Benjamin Rivera", age: 40, place: "Oklahoma City" },
+    { name: "Mia Stewart", age: 33, place: "Louisville" },
+    { name: "Jackson Collins", age: 28, place: "Baltimore" },
+    { name: "Ella Sanchez", age: 24, place: "Milwaukee" },
+    { name: "Logan Morris", age: 35, place: "Albuquerque" },
+    { name: "Victoria Reed", age: 27, place: "Tucson" },
+    { name: "Jacob Bell", age: 42, place: "Fresno" },
+    { name: "Lily Morgan", age: 22, place: "Mesa" },
+    { name: "Lucas Rogers", age: 34, place: "Atlanta" },
+    { name: "Zoe Cooper", age: 19, place: "Colorado Springs" },
+    { name: "Mason Bailey", age: 32, place: "Virginia Beach" },
+    { name: "Abigail Cox", age: 29, place: "Raleigh" },
+    { name: "Owen Ward", age: 36, place: "Omaha" },
+    { name: "Aurora Flores", age: 21, place: "Miami" },
+    { name: "Carter Gray", age: 37, place: "Oakland" },
+    { name: "Alice Patterson", age: 26, place: "Minneapolis" },
+    { name: "Luke Ross", age: 31, place: "Arlington" },
+    { name: "Charlotte Edwards", age: 27, place: "Tampa" },
+    { name: "Henry Jenkins", age: 33, place: "New Orleans" },
+    { name: "Evelyn Brooks", age: 28, place: "Wichita" },
+    { name: "Isaac Sanders", age: 34, place: "Cleveland" },
+    { name: "Scarlett Price", age: 23, place: "Tulsa" },
+    { name: "Jack Butler", age: 38, place: "Honolulu" },
+    { name: "Layla Long", age: 20, place: "Miami" },
+  ];
+  //   for (let i = 0; i < studentDetails.length; i++) {
+  //     console.log(studentDetails[i]);
+  //     // 1. creating element
+  //     let name = document.createElement("h1");
+  //     let place = document.createElement("p");
+  //     let age = document.createElement("p");
+  //     // 2. writing innerText
+  //     name.innerText = studentDetails[i].name;
+  //     place.innerText = studentDetails[i].place;
+  //     age.innerText = studentDetails[i].age;
+  //     //3. Appending to body
+  //     document.querySelector("body").append(name, place, age);
+  //   }
+
+  //forEach
+  //   studentDetails.forEach(function (student, i, arr) {
+  //     let name = document.createElement("h1");
+  //     let place = document.createElement("p");
+  //     let age = document.createElement("p");
+  //     // 2. writing innerText
+  //     name.innerText = student.name;
+  //     place.innerText = student.place;
+  //     age.innerText = student.age;
+  //     //3. Appending to body
+  //     document.querySelector("body").append(name, place, age);
+  //   });
+
+  function displayCards(studentDetails) {
+    document.querySelector("#cont").innerHTML = "";
+    studentDetails.forEach(function (student, i, arr) {
+      document.querySelector("#cont").innerHTML += `
+         <div>
+            <h1>${student.name}</h1>
+            <p>Age: ${student.age}</p>
+            <p>Place: ${student.place}</p>
+          </div>
+        `;
+    });
+  }
+
+  displayCards(studentDetails);
+
+  function sortAge() {
+    let sort = document.querySelector("select").value;
+    console.log(sort);
+    if (sort == "h2l") {
+      studentDetails.sort((a, b) => b.age - a.age);
+    } else if (sort == "l2h") {
+      studentDetails.sort((a, b) => a.age - b.age);
+    }
+    console.log(studentDetails);
+    displayCards(studentDetails);
+  }
+</script>

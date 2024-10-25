@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cont {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .role {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont"></div>
+  </body>
+</html>
+<script>
+  const investors = [
+    { name: "Vijay Shekhar Sharma", role: "Founder & CEO", company: "Paytm" },
+    { name: "Kunal Shah", role: "Founder", company: "CRED" },
+    { name: "Amrish Rau", role: "CEO", company: "Pine Labs" },
+    { name: "Sampad Swain", role: "Co-Founder & CEO", company: "Instamojo" },
+    { name: "Ankush Sachdeva", role: "Co-Founder & CEO", company: "ShareChat" },
+    {
+      name: "Bhanu Pratap Singh",
+      role: "Co-Founder & CTO",
+      company: "ShareChat",
+    },
+    { name: "Farid Ahsan", role: "Co-Founder & COO", company: "ShareChat" },
+    { name: "Amit Kumar Agarwal", role: "Founder & CEO", company: "NoBroker" },
+    { name: "Akhil Gupta", role: "Founder & CTO", company: "NoBroker" },
+    { name: "Saurabh Garg", role: "Co-Founder & CBO", company: "NoBroker" },
+    { name: "Vipin Pathak", role: "Co-Founder & CEO", company: "Care24" },
+    { name: "Ramakant Sharma", role: "Founder", company: "LivSpace" },
+    { name: "Mohit Tandon", role: "Co-Founder", company: "Delhivery" },
+    { name: "Abhishek Goyal", role: "Co-Founder", company: "Tracxn" },
+    {
+      name: "Anurag Jain",
+      role: "Founder & Executive Director",
+      company: "KredX",
+    },
+    {
+      name: "Harshvardhan Lunia",
+      role: "Co-Founder & CEO",
+      company: "LendingKart",
+    },
+    {
+      name: "Sunil Rao",
+      role: "Country Head Strategy and Corporate Business Development",
+      company: "Amazon",
+    },
+    { name: "Sharda Balaji", role: "Founder", company: "NovoJuris Legal" },
+    { name: "Kulin Shah", role: "Co-Founder", company: "Onsurity" },
+  ];
+
+  investors.map(function (elem, i, arr) {
+    document.querySelector("#cont").innerHTML += `
+    <div>
+      <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="" />
+      <h1 class="name">${elem.name}</h1>
+      <h3 class="role">${elem.role}</h3>
+      <h4 class="company">${elem.company}</h4>
+    </div>
+    `;
+  });
+</script>
