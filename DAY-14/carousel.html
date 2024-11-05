@@ -2,9 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Slideshow</title>
+    <title>Document</title>
     <style>
       /* Style the body */
       body {
@@ -66,7 +65,6 @@
         background-color: #f44336;
         color: white;
       }
-
       /* Hover effect for buttons */
       button:hover {
         opacity: 0.8;
@@ -74,51 +72,46 @@
     </style>
   </head>
   <body>
-    <h1>Beautiful Image Slideshow</h1>
     <div>
-      <button onClick="start()">START</button>
-      <button onClick="stop()">STOP</button>
+      <button onclick="start()">Start</button>
+      <button onclick="stop()">Stop</button>
     </div>
-
+    <h1>Image Slideshow</h1>
     <div id="container">
-      <!-- Image will be displayed here -->
+      <!-- Image display -->
     </div>
-
-    <script>
-      var images = [
-        "https://cdn.pixabay.com/photo/2019/05/29/14/30/cinque-terre-4237666_1280.jpg",
-        "https://cdn.pixabay.com/photo/2022/01/28/21/10/honeybee-6975865_1280.jpg",
-        "https://cdn.pixabay.com/photo/2021/10/16/05/43/love-6713977_1280.jpg",
-        "https://cdn.pixabay.com/photo/2022/01/25/12/58/conifer-6966140_1280.jpg",
-      ];
-
-      let x;
-
-      // Display the first image on load
-      window.onload = function () {
-        let slideImg = document.createElement("img");
-        slideImg.src = images[0]; // Set the first image as the default image
-        document.querySelector("#container").append(slideImg);
-      };
-
-      // Start the slideshow
-      function start() {
-        let i = 1;
-        x = setInterval(function () {
-          let slideImg = document.createElement("img");
-          if (i == images.length) {
-            i = 0;
-          }
-          slideImg.src = images[i++];
-          document.querySelector("#container").innerHTML = "";
-          document.querySelector("#container").append(slideImg);
-        }, 2000);
-      }
-
-      // Stop the slideshow
-      function stop() {
-        clearInterval(x);
-      }
-    </script>
   </body>
 </html>
+<script>
+  let x;
+  var images = [
+    "https://cdn.pixabay.com/photo/2019/05/29/14/30/cinque-terre-4237666_1280.jpg",
+    "https://cdn.pixabay.com/photo/2022/01/28/21/10/honeybee-6975865_1280.jpg",
+    "https://cdn.pixabay.com/photo/2021/10/16/05/43/love-6713977_1280.jpg",
+    "https://cdn.pixabay.com/photo/2022/01/25/12/58/conifer-6966140_1280.jpg",
+  ];
+  let slideimg = document.createElement("img");
+  slideimg.src = images[0];
+  document.querySelector("#container").append(slideimg);
+
+  function start() {
+    let i = 1;
+    document.querySelector("h1").innerText = "Image Slideshow Started";
+
+    x = setInterval(function () {
+      if (i == images.length) {
+        i = 0;
+      }
+      slideimg.src = images[i++];
+      document.querySelector("#container").append(slideimg);
+    }, 1000);
+  }
+
+  function stop() {
+    clearInterval(x);
+    document.querySelector("h1").innerText = "Image Slideshow Stopped";
+  }
+
+  // timer
+  //stop watch
+</script>

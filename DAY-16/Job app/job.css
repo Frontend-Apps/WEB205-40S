@@ -1,0 +1,117 @@
+body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 20px;
+      }
+    
+      #job-list{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:20px;
+      }
+    
+      .job-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        margin: 15px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    
+      .job-header {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-bottom: 2px solid #eee;
+      }
+    
+      .date {
+        font-size: 12px;
+        color: black;
+        padding: 10px;
+        display: inline;
+        width:80px;
+        background-color: #f0f0f0;
+        margin: 10px;
+        border-radius: 20px;
+        text-align: center;
+        font-weight: bold;
+      }
+    
+    
+      .job-content {
+        padding: 15px;
+      }
+    
+      .job-content h2 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+      }
+    
+      .job-content p {
+        font-size: 14px;
+        color: #555;
+        margin: 5px 0;
+      }
+    
+      .job-tags {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+    
+      .job-tags span {
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: black;
+        border:1px solid grey
+      }
+    
+      .job-footer {
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    
+      .job-footer p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    
+      .job-footer a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+    
+      .job-footer a:hover {
+        background-color: #555;
+      }
+
+      
+      @media screen and (min-width: 451px) and (max-width: 750px) {
+        #job-list{
+                grid-template-columns: repeat(2,1fr);
+                gap:20px;
+              }
+      }

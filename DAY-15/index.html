@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  // Washing clothes -> wash clothes -> dry clothes -> iron clothes -> fold clothes
+  function washClothes(time, callback) {
+    setTimeout(() => {
+      console.log(`Clothes are washed in ${time}ms `);
+      callback();
+    }, time);
+  }
+
+  function dryClothes(time, cb) {
+    setTimeout(() => {
+      console.log(`Clothes are Dried in ${time}ms `);
+      cb();
+    }, time);
+  }
+
+  function ironClothes(time, cb) {
+    setTimeout(() => {
+      console.log(`Clothes are ironed ${time}ms`);
+      cb();
+    }, time);
+  }
+
+  function foldClothes(time) {
+    setTimeout(() => {
+      console.log(`Clothes are folded ${time}ms`);
+    }, time);
+  }
+
+  washClothes(5000, function () {
+    dryClothes(3000, function () {
+      ironClothes(8000, function () {
+        foldClothes(4000, function () {
+          wearClothes(5000, function () {
+            wearWatch(1000, function () {
+              wearShoes(2000, function () {
+                takeOutCar(5000);
+              });
+            });
+          });
+        });
+      });
+    });
+  });
+  //   dryClothes(3000);
+  //   ironClothes(8000);
+  //   foldClothes(4000);
+</script>

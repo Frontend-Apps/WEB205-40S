@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="enter OTP" />
+    <button onclick="checkOtp()">Submit OTP</button>
+    <h1></h1>
+  </body>
+</html>
+
+<script>
+  //1234
+  function checkOtp() {
+    let otp = document.querySelector("input").value;
+
+    let otpPromise = new Promise((res, rej) => {
+      setTimeout(() => {
+        if (otp == 1234) {
+          res("Correct OTP");
+        } else {
+          rej("Incorrect OTP");
+        }
+      }, 2000);
+    });
+    otpPromise
+      .then((res) => {
+        document.querySelector("h1").innerText = res;
+      })
+      .catch((err) => {
+        document.querySelector("h1").innerText = err;
+      });
+  }
+</script>

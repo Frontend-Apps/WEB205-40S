@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  const promise1 = new Promise((resolve, reject) => {
+    reject("Task 1 not  complete!");
+  });
+
+  const promise2 = new Promise((resolve, reject) => {
+    reject("Task 2 not complete!");
+  });
+
+  const promise3 = new Promise((resolve, reject) => {
+    reject("Task 3 not complete!");
+  });
+
+  //   Promise.all([promise1, promise2, promise3])
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+
+  //   Promise.allSettled([promise1, promise2, promise3])
+  //     .then((res) => console.log(res))
+  //     .catch((err) => console.log(err));
+
+  Promise.any([promise1, promise2, promise3])
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+
+  function order() {
+    return new Promise((resolve, reject) => {
+      resolve("hi");
+      // Write code here
+    });
+  }
+
+  console.log(order());
+  order().then((res) => console.log(res));
+
+  let washclothes = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Clothes Washed");
+      resolve();
+    }, 5000);
+  });
+
+  async function greet() {
+    await washclothes; // wait until the promise resolves (*)
+    console.log("Dry clothese");
+  }
+
+  greet();
+</script>

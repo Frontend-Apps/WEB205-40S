@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Synchronous, blocking</h1>
+  </body>
+</html>
+
+<script>
+  function showTime() {
+    let dateTime = new Date();
+    let time = dateTime.toLocaleTimeString();
+    console.log(time);
+  }
+  //showTime();
+  let intervalId = setInterval(showTime, 1000);
+
+  //clearInterval
+
+  setTimeout(function () {
+    clearInterval(intervalId);
+    console.log("timer stopped");
+  }, 10000);
+</script>

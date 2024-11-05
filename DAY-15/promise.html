@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let myPromise = new Promise(function (resolve, reject) {
+    //resolve("Got drink, prepare table");
+    //reject("No drink, prepare desserts");
+  });
+
+  //   myPromise.then(function (message) {
+  //     console.log(message);
+  //   });
+  //   myPromise.catch(function (message) {
+  //     console.log(message);
+  //   });
+
+  myPromise
+    .then((message) => console.log(message))
+    .catch((message) => console.log(message));
+
+  // Assignment -> resolved if it is completed else rejected
+
+  let completedAssignment = new Promise((res, rej) => {
+    let isCompleted = false;
+    if (isCompleted) {
+      res("Completed my Assignment");
+    } else {
+      rej("Not completed");
+    }
+  });
+
+  completedAssignment
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+</script>
