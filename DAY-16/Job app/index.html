@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="job.css" />
   </head>
   <body>
+    <!-- <select id="filter" style="margin-right: 20px" onchange="fetchJobs()">
+      <option value="">Filter by Partime/fulltime</option>
+      <option value="ft">Full Time</option>
+      <option value="pt">Part Time</option>
+    </select>
+    <select id="sort" onchange="fetchJobs()">
+      <option value="">Sort by Salary</option>
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select> -->
+    <div>
+      <button id="prev" onclick="changePage('prev')">Previous Page</button>
+      <span>1</span>
+      <button id="next" onclick="changePage('next')">Next Page</button>
+    </div>
     <div id="job-list"></div>
   </body>
 </html>
 
-<script src="job.js"></script>
+<script src="job2.js"></script>
