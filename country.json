@@ -1,0 +1,45 @@
+{
+        
+          "2001": {
+            "countryName": "India",
+            "currency": "INR"
+          },
+          "2002": {
+            "countryName": "United States",
+            "currency": "USD"
+          },
+          "2003": {
+            "countryName": "United Kingdom",
+            "currency": "GBP"
+          },
+          "2004": {
+            "countryName": "Canada",
+            "currency": "CAD"
+          },
+          "2005": {
+            "countryName": "Australia",
+            "currency": "AUD"
+          },
+          "2006": {
+            "countryName": "Japan",
+            "currency": "JPY"
+          },
+          "2007": {
+            "countryName": "Germany",
+            "currency": "EUR"
+          },
+          "2008": {
+            "countryName": "France",
+            "currency": "EUR"
+          },
+          "2009": {
+            "countryName": "Brazil",
+            "currency": "BRL"
+          },
+          "2010": {
+            "countryName": "South Africa",
+            "currency": "ZAR"
+          }
+        }
+      
+      

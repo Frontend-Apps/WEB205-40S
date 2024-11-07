@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="email" id="email" disabled />
+      <input id="name" type="text" placeholder="Enter name" />
+      <input type="submit" value="Update Name" />
+    </form>
+  </body>
+</html>
+<script>
+  let params = new URLSearchParams(window.location.search);
+  let userID = params.get("id");
+
+  fetch(`https://masai-7b971-default-rtdb.firebaseio.com/users/${userID}.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      let email = data.email;
+      let name = data.name;
+      document.querySelector("#name").value = name;
+      document.querySelector("#email").value = email;
+    });
+
+  document.querySelector("form").addEventListener("submit", editUser);
+
+  function editUser() {
+    event.preventDefault();
+    let updatedName = document.querySelector("#name").value;
+
+    let raw = JSON.stringify({
+      name: updatedName,
+    });
+    fetch(
+      `https://masai-7b971-default-rtdb.firebaseio.com/users/${userID}.json`,
+      {
+        method: "PATCH",
+        body: raw,
+      }
+    )
+      .then((res) => res.json())
+      .then(() => {
+        alert("User updated successfully");
+        window.location.href = "index.html";
+      });
+  }
+</script>

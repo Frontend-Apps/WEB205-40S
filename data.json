@@ -1,0 +1,85 @@
+{
+        "users": {
+          "1001": {
+            "name": "Amit Sharma",
+            "email": "amitsharma@example.com"
+          },
+          "1002": {
+            "name": "Sneha Mishra",
+            "email": "snehamishra@example.com"
+          },
+          "1003": {
+            "name": "Rahul Kumar",
+            "email": "rahulkumar@example.com"
+          },
+          "1004": {
+            "name": "Priya Pandey",
+            "email": "priyapandey@example.com"
+          },
+          "1005": {
+            "name": "Vikas Singh",
+            "email": "vikassingh@example.com"
+          },
+          "1006": {
+            "name": "Anita Rai",
+            "email": "anitarai@example.com"
+          },
+          "1007": {
+            "name": "Rohit Jain",
+            "email": "rohitjain@example.com"
+          },
+          "1008": {
+            "name": "Pooja Sharma",
+            "email": "poojasharma@example.com"
+          },
+          "1009": {
+            "name": "Manish Gupta",
+            "email": "manishgupta@example.com"
+          },
+          "1010": {
+            "name": "Deepika Verma",
+            "email": "deepikaverma@example.com"
+          },
+          "1011": {
+            "name": "Sanjay Mehta",
+            "email": "sanjaymehta@example.com"
+          },
+          "1012": {
+            "name": "Aastha Kumar",
+            "email": "aasthakumar@example.com"
+          },
+          "1013": {
+            "name": "Sunil Khan",
+            "email": "sunilkhan@example.com"
+          },
+          "1014": {
+            "name": "Kavita Negi",
+            "email": "kavitanegi@example.com"
+          },
+          "1015": {
+            "name": "Nilesh Dubey",
+            "email": "nileshdubey@example.com"
+          },
+          "1016": {
+            "name": "Anjana Desai",
+            "email": "anjanadesai@example.com"
+          },
+          "1017": {
+            "name": "Karan Sharma",
+            "email": "karansharma@example.com"
+          },
+          "1018": {
+            "name": "Neha Saxena",
+            "email": "nehasaxena@example.com"
+          },
+          "1019": {
+            "name": "Rajesh Patel",
+            "email": "rajeshpatel@example.com"
+          },
+          "1020": {
+            "name": "Radhika Shah",
+            "email": "radhikashah@example.com"
+          }
+        }
+      }
+      

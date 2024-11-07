@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .grid {
+        display: grid;
+      }
+
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    </style>
+  </head>
+  <body>
+    <button><a href="create.html">Create User</a></button>
+    <div class="grid grid-cols-2 gap-2 lg:grid-cols-4 md:grid-cols-3" id="container"></div>
+  </body>
+</html>
+
+<script src="index.js"></script>

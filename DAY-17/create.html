@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Create User</h1>
+    <form>
+      <input id="name" type="text" placeholder="enter name" />
+      <input id="email" type="email" placeholder="enter email" />
+      <input type="submit" value="Create User" />
+    </form>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", createUser);
+
+  function createUser() {
+    event.preventDefault();
+    let username = document.querySelector("#name").value;
+    let email = document.querySelector("#email").value;
+    console.log(username, email);
+
+    let userData = JSON.stringify({
+      email: email,
+      name: username,
+    });
+
+    fetch("https://masai-7b971-default-rtdb.firebaseio.com/users.json", {
+      method: "POST",
+      body: userData,
+    })
+      .then((res) => res.json())
+      .then(() => {
+        alert("user created successfully");
+        window.location.href = "index.html";
+      });
+  }
+</script>
